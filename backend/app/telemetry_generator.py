@@ -3,12 +3,85 @@ import random
 import os
 from datetime import datetime
 
+# Embedded fallback roads dataset to guarantee non-empty telemetry in all environments
+FALLBACK_ROADS = [
+    {
+        "road_id": "ROAD-WEH-01", "name": "Western Express Highway", "area": "Andheri",
+        "length_km": 25.3, "free_flow_speed": 65, "base_speed": 32,
+        "coordinates": [[19.0435, 72.8465], [19.0822, 72.8512], [19.1197, 72.8464], [19.1652, 72.8576], [19.2312, 72.8561]]
+    },
+    {
+        "road_id": "ROAD-EEH-02", "name": "Eastern Express Highway", "area": "Ghatkopar",
+        "length_km": 23.8, "free_flow_speed": 70, "base_speed": 38,
+        "coordinates": [[19.0375, 72.8612], [19.0682, 72.8834], [19.1105, 72.9095], [19.1764, 72.9511], [19.2155, 72.9732]]
+    },
+    {
+        "road_id": "ROAD-SPH-03", "name": "Sion-Panvel Highway", "area": "Vashi",
+        "length_km": 28.5, "free_flow_speed": 75, "base_speed": 35,
+        "coordinates": [[19.0465, 72.8885], [19.0612, 72.9234], [19.0776, 72.9982], [19.0431, 73.0234], [19.0215, 73.0645]]
+    },
+    {
+        "road_id": "ROAD-LBS-04", "name": "LBS Marg", "area": "Kurla",
+        "length_km": 21.0, "free_flow_speed": 45, "base_speed": 22,
+        "coordinates": [[19.0398, 72.8682], [19.0712, 72.8795], [19.1023, 72.9152], [19.1678, 72.9465]]
+    },
+    {
+        "road_id": "ROAD-SVR-05", "name": "SV Road", "area": "Bandra",
+        "length_km": 24.2, "free_flow_speed": 50, "base_speed": 25,
+        "coordinates": [[19.0567, 72.8398], [19.0889, 72.8365], [19.1178, 72.8391], [19.1823, 72.8488]]
+    },
+    {
+        "road_id": "ROAD-JVLR-06", "name": "Jogeshwari-Vikhroli Link Road (JVLR)", "area": "Powai",
+        "length_km": 10.6, "free_flow_speed": 60, "base_speed": 28,
+        "coordinates": [[19.1312, 72.8523], [19.1235, 72.8812], [19.1267, 72.9098], [19.1189, 72.9324]]
+    },
+    {
+        "road_id": "ROAD-SCLR-07", "name": "Santacruz-Chembur Link Road (SCLR)", "area": "Kurla",
+        "length_km": 6.4, "free_flow_speed": 55, "base_speed": 29,
+        "coordinates": [[19.0812, 72.8545], [19.0734, 72.8789], [19.0656, 72.8956]]
+    },
+    {
+        "road_id": "ROAD-BKC-08", "name": "BKC Connector & Main Avenue", "area": "BKC",
+        "length_km": 4.5, "free_flow_speed": 50, "base_speed": 34,
+        "coordinates": [[19.0623, 72.8612], [19.0655, 72.8689], [19.0688, 72.8765]]
+    },
+    {
+        "road_id": "ROAD-BWSL-10", "name": "Bandra-Worli Sea Link", "area": "Bandra",
+        "length_km": 5.6, "free_flow_speed": 80, "base_speed": 62,
+        "coordinates": [[19.0434, 72.8212], [19.0256, 72.8156], [19.0112, 72.8167]]
+    },
+    {
+        "road_id": "ROAD-MCR-11", "name": "Mumbai Coastal Road", "area": "Worli",
+        "length_km": 10.5, "free_flow_speed": 80, "base_speed": 64,
+        "coordinates": [[18.9432, 72.8223], [18.9712, 72.8112], [19.0089, 72.8123]]
+    },
+    {
+        "road_id": "ROAD-MTHL-12", "name": "Atal Setu (MTHL)", "area": "Navi Mumbai",
+        "length_km": 21.8, "free_flow_speed": 100, "base_speed": 82,
+        "coordinates": [[18.9912, 72.8612], [18.9834, 72.9345], [18.9756, 73.0012]]
+    }
+]
+
 def load_mumbai_roads():
-    data_path = os.path.join(os.path.dirname(__file__), "..", "..", "data", "demo", "mumbai_roads.json")
-    if os.path.exists(data_path):
-        with open(data_path, "r") as f:
-            return json.load(f)
-    return []
+    possible_paths = [
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "demo", "mumbai_roads.json"),
+        os.path.join(os.path.dirname(__file__), "..", "..", "data", "mumbai_roads.json"),
+        os.path.join(os.getcwd(), "data", "demo", "mumbai_roads.json"),
+        os.path.join(os.getcwd(), "data", "mumbai_roads.json"),
+        os.path.join(os.getcwd(), "..", "data", "demo", "mumbai_roads.json"),
+        "/app/data/demo/mumbai_roads.json",
+        "/app/data/mumbai_roads.json"
+    ]
+    for data_path in possible_paths:
+        if os.path.exists(data_path):
+            try:
+                with open(data_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if data and len(data) > 0:
+                        return data
+            except Exception:
+                continue
+    return FALLBACK_ROADS
 
 MUMBAI_ROADS = load_mumbai_roads()
 

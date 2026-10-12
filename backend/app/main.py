@@ -47,11 +47,12 @@ def refresh_telemetry():
         fm_estimator.process_event(event_key)
 
     # Add artificial duplicates to demonstrate Bloom Filter detection
-    for _ in range(3):
-        dup_rec = random.choice(records)
-        event_key = f"{dup_rec['road_id']}_{dup_rec['event_hash']}"
-        bloom_filter.add(event_key)
-        fm_estimator.process_event(event_key)
+    if records:
+        for _ in range(min(3, len(records))):
+            dup_rec = random.choice(records)
+            event_key = f"{dup_rec['road_id']}_{dup_rec['event_hash']}"
+            bloom_filter.add(event_key)
+            fm_estimator.process_event(event_key)
 
     db_manager.store_snapshot(records, roads, incidents)
     return records, roads, incidents
