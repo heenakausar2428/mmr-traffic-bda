@@ -1,0 +1,57 @@
+[
+  {
+    "event_id": "EVT-10001",
+    "timestamp": "2026-10-06T08:00:00Z",
+    "road_id": "ROAD-WEH-01",
+    "road_name": "Western Express Highway",
+    "area": "Andheri",
+    "current_speed": 22.4,
+    "free_flow_speed": 65.0,
+    "vehicle_count": 1420,
+    "congestion": "SEVERE"
+  },
+  {
+    "event_id": "EVT-10002",
+    "timestamp": "2026-10-06T08:00:00Z",
+    "road_id": "ROAD-EEH-02",
+    "road_name": "Eastern Express Highway",
+    "area": "Ghatkopar",
+    "current_speed": 31.0,
+    "free_flow_speed": 70.0,
+    "vehicle_count": 1180,
+    "congestion": "HIGH"
+  },
+  {
+    "event_id": "EVT-10003",
+    "timestamp": "2026-10-06T08:00:00Z",
+    "road_id": "ROAD-LBS-04",
+    "road_name": "LBS Marg",
+    "area": "Kurla",
+    "current_speed": 18.2,
+    "free_flow_speed": 45.0,
+    "vehicle_count": 980,
+    "congestion": "SEVERE"
+  },
+  {
+    "event_id": "EVT-10004",
+    "timestamp": "2026-10-06T09:00:00Z",
+    "road_id": "ROAD-BKC-08",
+    "road_name": "BKC Connector & Main Avenue",
+    "area": "BKC",
+    "current_speed": 24.5,
+    "free_flow_speed": 50.0,
+    "vehicle_count": 1650,
+    "congestion": "HIGH"
+  },
+  {
+    "event_id": "EVT-10005",
+    "timestamp": "2026-10-06T09:00:00Z",
+    "road_id": "ROAD-BWSL-10",
+    "road_name": "Bandra-Worli Sea Link",
+    "area": "Bandra",
+    "current_speed": 58.0,
+    "free_flow_speed": 80.0,
+    "vehicle_count": 890,
+    "congestion": "MODERATE"
+  }
+]

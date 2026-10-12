@@ -1,0 +1,186 @@
+[
+  {
+    "road_id": "ROAD_WEH_01",
+    "road_name": "Western Express Highway (Bandra - Andheri)",
+    "area": "Western Suburbs",
+    "start_point": "Kalanagar Junction, Bandra",
+    "end_point": "Airport Junction, Andheri",
+    "length_km": 8.5,
+    "speed_limit_kmh": 80,
+    "typical_free_flow_speed": 75,
+    "coordinates": [
+      [19.0607, 72.8526],
+      [19.0750, 72.8490],
+      [19.0900, 72.8510],
+      [19.1136, 72.8530]
+    ]
+  },
+  {
+    "road_id": "ROAD_WEH_02",
+    "road_name": "Western Express Highway (Andheri - Borivali)",
+    "area": "Western Suburbs",
+    "start_point": "Airport Junction, Andheri",
+    "end_point": "Magathane, Borivali",
+    "length_km": 12.0,
+    "speed_limit_kmh": 80,
+    "typical_free_flow_speed": 70,
+    "coordinates": [
+      [19.1136, 72.8530],
+      [19.1400, 72.8560],
+      [19.1750, 72.8600],
+      [19.2300, 72.8570]
+    ]
+  },
+  {
+    "road_id": "ROAD_EEH_01",
+    "road_name": "Eastern Express Highway (Sion - Ghatkopar)",
+    "area": "Eastern Suburbs",
+    "start_point": "Sion Circle",
+    "end_point": "Ghatkopar Junction",
+    "length_km": 7.2,
+    "speed_limit_kmh": 80,
+    "typical_free_flow_speed": 72,
+    "coordinates": [
+      [19.0400, 72.8630],
+      [19.0650, 72.8800],
+      [19.0850, 72.8980]
+    ]
+  },
+  {
+    "road_id": "ROAD_EEH_02",
+    "road_name": "Eastern Express Highway (Ghatkopar - Thane)",
+    "area": "Eastern Suburbs / Thane",
+    "start_point": "Ghatkopar Junction",
+    "end_point": "Teen Hath Naka, Thane",
+    "length_km": 14.5,
+    "speed_limit_kmh": 80,
+    "typical_free_flow_speed": 75,
+    "coordinates": [
+      [19.0850, 72.8980],
+      [19.1200, 72.9250],
+      [19.1650, 72.9550],
+      [19.1860, 72.9630]
+    ]
+  },
+  {
+    "road_id": "ROAD_SPH_01",
+    "road_name": "Sion-Panvel Highway (Sion - Vashi Bridge)",
+    "area": "Central / Navi Mumbai",
+    "start_point": "Priyardarshini Park, Sion",
+    "end_point": "Vashi Toll Plaza",
+    "length_km": 11.8,
+    "speed_limit_kmh": 70,
+    "typical_free_flow_speed": 65,
+    "coordinates": [
+      [19.0450, 72.8750],
+      [19.0550, 72.9100],
+      [19.0400, 72.9600],
+      [19.0380, 72.9900]
+    ]
+  },
+  {
+    "road_id": "ROAD_LBS_01",
+    "road_name": "LBS Marg (Sion - Kurla - Ghatkopar)",
+    "area": "Central Suburbs",
+    "start_point": "Sion Railway Station",
+    "end_point": "Ghatkopar West",
+    "length_km": 8.0,
+    "speed_limit_kmh": 50,
+    "typical_free_flow_speed": 45,
+    "coordinates": [
+      [19.0420, 72.8610],
+      [19.0680, 72.8750],
+      [19.0900, 72.9100]
+    ]
+  },
+  {
+    "road_id": "ROAD_SVR_01",
+    "road_name": "SV Road (Bandra - Andheri)",
+    "area": "Western Suburbs",
+    "start_point": "Bandra Talkies",
+    "end_point": "Andheri Railway Station",
+    "length_km": 9.2,
+    "speed_limit_kmh": 50,
+    "typical_free_flow_speed": 40,
+    "coordinates": [
+      [19.0550, 72.8390],
+      [19.0800, 72.8370],
+      [19.1200, 72.8410]
+    ]
+  },
+  {
+    "road_id": "ROAD_BKC_01",
+    "road_name": "BKC Main Avenue (Kalanagar - Kurla)",
+    "area": "BKC Commercial Complex",
+    "start_point": "Kalanagar Junction",
+    "end_point": "MTNL Junction, Kurla",
+    "length_km": 4.5,
+    "speed_limit_kmh": 60,
+    "typical_free_flow_speed": 55,
+    "coordinates": [
+      [19.0607, 72.8526],
+      [19.0650, 72.8680],
+      [19.0700, 72.8780]
+    ]
+  },
+  {
+    "road_id": "ROAD_JVLR_01",
+    "road_name": "JVLR (Jogeshwari - Powai - Vikhroli)",
+    "area": "Western / Central Connector",
+    "start_point": "Jogeshwari WEH Junction",
+    "end_point": "EEH Vikhroli Junction",
+    "length_km": 10.6,
+    "speed_limit_kmh": 60,
+    "typical_free_flow_speed": 55,
+    "coordinates": [
+      [19.1350, 72.8550],
+      [19.1250, 72.9050],
+      [19.1100, 72.9350]
+    ]
+  },
+  {
+    "road_id": "ROAD_SCLR_01",
+    "road_name": "SCLR (Santacruz - Chembur Link Road)",
+    "area": "Cross-Suburban",
+    "start_point": "Santacruz WEH",
+    "end_point": "Chembur Amar Mahal",
+    "length_km": 6.4,
+    "speed_limit_kmh": 60,
+    "typical_free_flow_speed": 50,
+    "coordinates": [
+      [19.0800, 72.8530],
+      [19.0730, 72.8850],
+      [19.0650, 72.9000]
+    ]
+  },
+  {
+    "road_id": "ROAD_PBR_01",
+    "road_name": "Palm Beach Road (Vashi - Belapur)",
+    "area": "Navi Mumbai",
+    "start_point": "Vashi Sector 17",
+    "end_point": "CBD Belapur",
+    "length_km": 10.0,
+    "speed_limit_kmh": 70,
+    "typical_free_flow_speed": 68,
+    "coordinates": [
+      [19.0750, 72.9980],
+      [19.0400, 73.0150],
+      [19.0150, 73.0380]
+    ]
+  },
+  {
+    "road_id": "ROAD_MDR_01",
+    "road_name": "Marine Drive & Coastal Road",
+    "area": "South Mumbai",
+    "start_point": "Nariman Point",
+    "end_point": "Worli Sea Face",
+    "length_km": 9.8,
+    "speed_limit_kmh": 70,
+    "typical_free_flow_speed": 65,
+    "coordinates": [
+      [18.9250, 72.8230],
+      [18.9550, 72.8180],
+      [19.0100, 72.8150]
+    ]
+  }
+]

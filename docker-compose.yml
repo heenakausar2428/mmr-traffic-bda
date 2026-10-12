@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mumbai_traffic_app
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - TRAFFIC_API_KEY=gBkhvX928dOWAaIFt2j05vt1MpWFIrUj
+      - MONGO_URI=mongodb://mongodb:27017
+      - MONGO_DB_NAME=mumbai_traffic_db
+    depends_on:
+      - mongodb
+    restart: unless-stopped
+
+  mongodb:
+    image: mongo:6.0
+    container_name: mumbai_traffic_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+volumes:
+  mongo_data:

@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0b0f17;
+    color: #f8fafc;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Leaflet Map Styling */
+.leaflet-container {
+  background: #090d14 !important;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+/* Google Maps Dark Mode Vector Filter */
+.google-map-dark-filter .leaflet-tile-pane {
+  filter: brightness(0.68) invert(1) contrast(3.2) hue-rotate(200deg) saturate(0.35);
+}
+
+.leaflet-popup-content-wrapper {
+  background: #131b2a !important;
+  color: #f8fafc !important;
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+.leaflet-popup-tip {
+  background: #131b2a !important;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

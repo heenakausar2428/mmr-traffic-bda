@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: mumbai-traffic-intelligence
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TRAFFIC_API_KEY
+        value: gBkhvX928dOWAaIFt2j05vt1MpWFIrUj
+      - key: MONGO_URI
+        value: mongodb://localhost:27017
+      - key: MONGO_DB_NAME
+        value: mumbai_traffic_db
+
